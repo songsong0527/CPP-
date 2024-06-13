@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\Administrator\Desktop\CPP数据结构与算法\围棋的气\main.cpp(70,19): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+  围棋的气.vcxproj -> C:\Users\Administrator\Desktop\CPP数据结构与算法\寻找身高相近的小朋友\x64\Debug\围棋的气.exe
