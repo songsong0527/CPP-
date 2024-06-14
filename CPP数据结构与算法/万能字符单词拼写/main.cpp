@@ -17,17 +17,20 @@ int main() {
 	cin >> mystring;
 	for (int i = 0; i < n; i++)
 	{
+		bool flag = false;
 		vector<char> mychars(mystring.begin(), mystring.end());
 		for (int j = 0; j < words[i].size(); j++)
 		{
 			for (int q = 0; q < mychars.size(); q++)
 			{
+				//ÅÐ¶Ï×Ö·û
 				if (mychars[q] == words[i][j])
 				{
 					mychars[q] = 0;
 					break;
 				}
-				if (q == mychars.size() - 1)
+				//ÅÐ¶ÏÍòÄÜ×Ö·û
+				else if (q == mychars.size() - 1)
 				{
 					for (int z = 0; z < mychars.size(); z++)
 					{
@@ -36,9 +39,18 @@ int main() {
 							mychars[z] = 0;
 							break;
 						}
+						else if (z == mychars.size() - 1)
+						{
+							flag = true;
+							break;
+						}
 					}
 				}
 			}
+		}
+		if (flag)
+		{
+			fail++;
 		}
 	}
 	cout << n - fail;
